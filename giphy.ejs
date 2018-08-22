@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Giphy</title>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <% for(var i=0; i < giphy.length; i++){%>
+            <% const { images } = giphy[i]; %>
+                <div class="col-md-12" style="background-color:#669CF6">
+                    <div class="col-md-10">
+                        <img src="<%=images.fixed_height_still.url%>" />
+                    </div>
+                    <br>
+                    <div class="col-md-10">
+                        <a href="<%=giphy[i].embed_url%>">
+                            <%=giphy[i].embed_url%>
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <%}%>
+
+    </div>
+
+</body>
+
+</html>
